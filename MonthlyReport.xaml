@@ -110,7 +110,7 @@
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Workflow" sap:VirtualizedContainerService.HintSize="940.6666666666666,1327.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Workflow" sap:VirtualizedContainerService.HintSize="940.6666666666666,1563.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="cutoffDate" />
       <Variable x:TypeArguments="s:DateTime" Name="today" />
@@ -259,6 +259,25 @@
         </OutArgument>
       </ui:SortDataTable.OutputDataTable>
     </ui:SortDataTable>
+    <Assign sap:VirtualizedContainerService.HintSize="502,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">htmlTable</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">string.Format("&lt;table border='1' cellpadding='5' cellspacing='0' style='border-collapse:collapse;'&gt;&lt;tr&gt;{0}&lt;/tr&gt;{1}&lt;/table&gt;", string.Join("", dtUpcomingPTOs.Columns.Cast&lt;System.Data.DataColumn&gt;().Select(column =&gt; string.Format("&lt;th&gt;{0}&lt;/th&gt;", column.ColumnName))), string.Join("", dtUpcomingPTOs.Rows.Cast&lt;System.Data.DataRow&gt;().Select(row =&gt; string.Format("&lt;tr&gt;{0}&lt;/tr&gt;", string.Join("", row.ItemArray.Select(item =&gt; string.Format("&lt;td&gt;{0}&lt;/td&gt;", item)))))))</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="502,118.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+      <ui:MessageBox.Text>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">htmlTable</CSharpValue>
+        </InArgument>
+      </ui:MessageBox.Text>
+    </ui:MessageBox>
     <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="502,694.6666666666666" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
