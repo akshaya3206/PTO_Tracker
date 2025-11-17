@@ -123,12 +123,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="502,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Dummy Data" WorkbookPath="C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\PTO Tracker (under development)\Sample Christus_PTO_Tracker_Dev_Inprogress.xlsx">
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="502,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Dummy Data">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">dtPTO</CSharpReference>
         </OutArgument>
       </ui:ReadRange.DataTable>
+      <ui:ReadRange.WorkbookPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">string.Format(@"C:\Users\{0}\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\PTO Tracker (under development)\Sample Christus_PTO_Tracker_Dev_Inprogress.xlsx", user)</CSharpValue>
+        </InArgument>
+      </ui:ReadRange.WorkbookPath>
     </ui:ReadRange>
     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="502,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
