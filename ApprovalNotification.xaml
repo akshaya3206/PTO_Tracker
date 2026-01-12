@@ -130,7 +130,7 @@
       <AssemblyReference>Microsoft.Graph</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ApprovalNotification" sap:VirtualizedContainerService.HintSize="940.6666666666666,5356.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ApprovalNotification" sap:VirtualizedContainerService.HintSize="940.6666666666666,5326" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtEmailStatus" />
       <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
@@ -386,32 +386,32 @@
         </InArgument>
       </ui:ForEachRow.DataTable>
     </ui:ForEachRow>
-    <ui:IfElseIfV2 DisplayName="Else If" sap:VirtualizedContainerService.HintSize="680,3713.3333333333335" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+    <ui:IfElseIfV2 DisplayName="Else If" sap:VirtualizedContainerService.HintSize="680,3682.6666666666665" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
       <ui:IfElseIfV2.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">dtApproved.Rows.Count == 0</CSharpValue>
         </InArgument>
       </ui:IfElseIfV2.Condition>
       <ui:IfElseIfV2.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="678,3365.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="678,3334.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="644,3305.3333333333335" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="644,3274.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="642,3130.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="642,3100" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="608,302.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="608,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -471,18 +471,6 @@
                           <ui:AssignOperation.Value>
                             <InArgument x:TypeArguments="x:String">
                               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">CurrentRow["Analyst Name:"].ToString();</CSharpValue>
-                            </InArgument>
-                          </ui:AssignOperation.Value>
-                        </ui:AssignOperation>
-                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
-                          <ui:AssignOperation.To>
-                            <OutArgument x:TypeArguments="x:Object">
-                              <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">FromDateE</CSharpReference>
-                            </OutArgument>
-                          </ui:AssignOperation.To>
-                          <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:Object">
-                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">CurrentRow["From Date:"]</CSharpValue>
                             </InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
@@ -706,7 +694,7 @@
                             <If sap:VirtualizedContainerService.HintSize="538,832" sap2010:WorkflowViewState.IdRef="If_3">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
-                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106" xml:space="preserve">EmailRowCheck["Analyst Name:"].ToString() == Analyst  &amp;&amp; EmailRowCheck["From Date:"].ToString() == FromDate &amp;&amp; EmailRowCheck["To Date:"].ToString() == ToDate</CSharpValue>
+                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109" xml:space="preserve">EmailRowCheck["Analyst Name:"].ToString() == Analyst  &amp;&amp; DateTime.Parse(EmailRowCheck["From Date:"].ToString()).ToString("MM/dd/yyyy") == FromDate &amp;&amp; DateTime.Parse(EmailRowCheck["To Date:"].ToString()).ToString("MM/dd/yyyy") == ToDate</CSharpValue>
                                 </InArgument>
                               </If.Condition>
                               <If.Then>
