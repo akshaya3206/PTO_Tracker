@@ -104,7 +104,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WeeklyPTORequests" sap:VirtualizedContainerService.HintSize="940.6666666666666,2307.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WeeklyPTORequests" sap:VirtualizedContainerService.HintSize="940.6666666666666,2276.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtPTO" />
       <Variable x:TypeArguments="s:DateTime" Name="today" />
@@ -186,12 +186,9 @@
         </OutArgument>
       </ui:FilterDataTable.OutputDataTable>
       <ui:FilterDataTable.SelectColumns>
-        <scg:List x:TypeArguments="InArgument" Capacity="16">
+        <scg:List x:TypeArguments="InArgument" Capacity="8">
           <InArgument x:TypeArguments="x:String">
             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">"Analyst Name:"</CSharpValue>
-          </InArgument>
-          <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">"Deloitte Email ID:"</CSharpValue>
           </InArgument>
           <InArgument x:TypeArguments="x:String">
             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">"Module:"</CSharpValue>
@@ -280,7 +277,7 @@
         </InArgument>
       </ui:ForEachRow.DataTable>
     </ui:ForEachRow>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="513.3333333333334,425.3333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="513.3333333333334,394.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -304,18 +301,6 @@
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:Object">
                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">"Analyst Name"</CSharpValue>
-              </InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Object">
-                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">newRow["Deloitte Email ID:"]</CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Object">
-                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">"Deloitte Email ID"</CSharpValue>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
