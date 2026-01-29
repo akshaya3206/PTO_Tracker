@@ -108,11 +108,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="WeeklyPTORequests" sap:VirtualizedContainerService.HintSize="940.6666666666666,3589.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="slno">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="slno" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtPTO" />
       <Variable x:TypeArguments="s:DateTime" Name="today" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtPTOdraft" />
@@ -559,7 +555,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Weekly Report: PTO Requests Pending Approval" To="tdebmallik@deloitte.com; nitishkumar44@deloitte.com; ankitaroy2@deloitte.com; pjagdishzalavadia@deloitte.com; jbelel@deloitte.com;" UseDocumentAsBody="False">
+            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="High" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Weekly Report: PTO Requests Pending Approval" To="tdebmallik@deloitte.com; nitishkumar44@deloitte.com; ankitaroy2@deloitte.com; pjagdishzalavadia@deloitte.com; jbelel@deloitte.com;" UseDocumentAsBody="False">
               <umab:SendMailX.Account>
                 <InArgument x:TypeArguments="um:IMailQuickHandle">
                   <CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">Outlook</CSharpValue>
