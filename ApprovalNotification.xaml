@@ -153,7 +153,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="680,332.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select Approval Lead" OptionsString="Nitish Kumar;Ankita Roy;Parth Zalavadia;Jagannath Belel;All" Title="Select PTO Approver" TopMost="False">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="680,332.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select Approval Lead" OptionsString="Nitish Kumar;Ankita Roy;Parth Zalavadia;Jagannath Belel;Tanima Debmallik/Nitish Kumar;All" Title="Select PTO Approver" TopMost="False">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">Approver</CSharpReference>
