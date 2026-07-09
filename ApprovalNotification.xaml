@@ -154,7 +154,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="680,332.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select Approval Lead" OptionsString="Nitish Kumar;Ankita Roy;Parth Zalavadia;Jagannath Belel;Tanima Debmallik/Nitish Kumar;All" Title="Select PTO Approver" TopMost="False">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="680,332.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select Approval Lead" OptionsString="Nitish Kumar;Ankita Roy;Harshad Mandlik;Jagannath Belel;Tanima Debmallik/Nitish Kumar;All" Title="Select PTO Approver" TopMost="False">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">Approver</CSharpReference>
@@ -663,7 +663,7 @@
                         <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
                           <ui:IfElseIfBlock.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
-                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_117">Approver=="Parth Zalavadia" || Approver=="Jagannath Belel"</CSharpValue>
+                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">Approver=="Harshad Mandlik" || Approver=="Jagannath Belel"</CSharpValue>
                             </InArgument>
                           </ui:IfElseIfBlock.Condition>
                           <ui:IfElseIfBlock.Then>
