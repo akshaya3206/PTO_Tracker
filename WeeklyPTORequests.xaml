@@ -106,7 +106,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WeeklyPTORequests" sap:VirtualizedContainerService.HintSize="940.6666666666666,3589.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WeeklyPTORequests" sap:VirtualizedContainerService.HintSize="920.6666666666666,3620" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="1" Name="slno" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtPTO" />
@@ -215,7 +215,10 @@
             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">"Status:"</CSharpValue>
           </InArgument>
           <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">"Approver"</CSharpValue>
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">"Approver01"</CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"Approver02"</CSharpValue>
           </InArgument>
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
@@ -394,7 +397,7 @@
         </ui:ForEachRow.DataTable>
       </ui:ForEachRow>
     </Sequence>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="547.3333333333334,456" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="547.3333333333334,486.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -520,12 +523,24 @@
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:Object">
-                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">newRow["Approver"]</CSharpReference>
+                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">newRow["Approver01"]</CSharpReference>
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:Object">
-                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">"Approver"</CSharpValue>
+                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">"Approver01"</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Object">
+                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">newRow["Approver02"]</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Object">
+                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">"Approver02"</CSharpValue>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -555,7 +570,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="High" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Weekly Report: PTO Requests Pending Approval" To="tdebmallik@deloitte.com; nitishkumar44@deloitte.com; ankitaroy2@deloitte.com; hmandlik@deloitte.com; jbelel@deloitte.com;" UseDocumentAsBody="False">
+            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="High" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Weekly Report: PTO Requests Pending Approval" To="tdebmallik@deloitte.com; nitishkumar44@deloitte.com; ankitaroy2@deloitte.com; hmandlik@deloitte.com; jbelel@deloitte.com; vitulasi@deloitte.com; pbraj@deloitte.com; drajitha@deloitte.com; racharachana@deloitte.com; stanuja@deloitte.com; divmaheshwari@deloitte.com" UseDocumentAsBody="False">
               <umab:SendMailX.Account>
                 <InArgument x:TypeArguments="um:IMailQuickHandle">
                   <CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">Outlook</CSharpValue>

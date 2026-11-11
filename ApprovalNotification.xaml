@@ -131,7 +131,7 @@
       <AssemblyReference>Microsoft.Graph</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ApprovalNotification" sap:VirtualizedContainerService.HintSize="940.6666666666666,6998" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ApprovalNotification" sap:VirtualizedContainerService.HintSize="920.6666666666666,6655.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtNT" />
       <Variable x:TypeArguments="x:String" Name="ccLeads" />
@@ -155,7 +155,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="680,332.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select Approval Lead" OptionsString="Nitish Kumar;Ankita Roy;Harshad Mandlik;Jagannath Belel;Tanima Debmallik/Nitish Kumar;Nitish &amp; Tanima;All" Title="Select PTO Approver" TopMost="False">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="680,332.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select Approval Lead" OptionsString="Nitish Kumar;Ankita Roy;Harshad Mandlik;Jagannath Belel;Tanima Debmallik;Heather Gustafson;Pavani B Raj;Tanuja Sunkara;Rachana Golla;Rajitha D;Divya Maheshwari;Vineeth Tulasi;All" Title="Select PTO Approver" TopMost="False">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">Approver</CSharpReference>
@@ -186,20 +186,20 @@
         </InArgument>
       </ui:ReadRange.WorkbookPath>
     </ui:ReadRange>
-    <ui:IfElseIfV2 DisplayName="Else If" sap:VirtualizedContainerService.HintSize="680,1162.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIfV2_3">
+    <ui:IfElseIfV2 DisplayName="Else If" sap:VirtualizedContainerService.HintSize="680,877.3333333333334" sap2010:WorkflowViewState.IdRef="IfElseIfV2_3">
       <ui:IfElseIfV2.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">Approver == "All"</CSharpValue>
         </InArgument>
       </ui:IfElseIfV2.Condition>
       <ui:IfElseIfV2.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,246.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,442.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_30">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:FilterDataTable DisplayName="Filter Data Table based on Approver" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,186.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" SelectColumnsMode="Remove">
+          <ui:FilterDataTable DisplayName="Filter Data Table based on Approver" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,196" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" SelectColumnsMode="Remove">
             <ui:FilterDataTable.DataTable>
               <InArgument x:TypeArguments="sd:DataTable">
                 <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">dtPTO</CSharpValue>
@@ -227,19 +227,7 @@
                   </ui:FilterOperationArgument.Column>
                   <ui:FilterOperationArgument.Operand>
                     <InArgument x:TypeArguments="s:DateTime">
-                      <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_140">DateTime.Today</CSharpValue>
-                    </InArgument>
-                  </ui:FilterOperationArgument.Operand>
-                </ui:FilterOperationArgument>
-                <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                  <ui:FilterOperationArgument.Column>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_141">"Approver"</CSharpValue>
-                    </InArgument>
-                  </ui:FilterOperationArgument.Column>
-                  <ui:FilterOperationArgument.Operand>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">Approver</CSharpValue>
+                      <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_170">DateTime.Today</CSharpValue>
                     </InArgument>
                   </ui:FilterOperationArgument.Operand>
                 </ui:FilterOperationArgument>
@@ -268,129 +256,55 @@
               </scg:List>
             </ui:FilterDataTable.SelectColumns>
           </ui:FilterDataTable>
+          <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,186.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" SelectColumnsMode="Remove">
+            <ui:FilterDataTable.DataTable>
+              <InArgument x:TypeArguments="sd:DataTable">
+                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_171">dtApproved</CSharpValue>
+              </InArgument>
+            </ui:FilterDataTable.DataTable>
+            <ui:FilterDataTable.Filters>
+              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                  <ui:FilterOperationArgument.Column>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_172">"Approver01"</CSharpValue>
+                    </InArgument>
+                  </ui:FilterOperationArgument.Column>
+                  <ui:FilterOperationArgument.Operand>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_173">Approver</CSharpValue>
+                    </InArgument>
+                  </ui:FilterOperationArgument.Operand>
+                </ui:FilterOperationArgument>
+                <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                  <ui:FilterOperationArgument.Column>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">"Approver02"</CSharpValue>
+                    </InArgument>
+                  </ui:FilterOperationArgument.Column>
+                  <ui:FilterOperationArgument.Operand>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">Approver</CSharpValue>
+                    </InArgument>
+                  </ui:FilterOperationArgument.Operand>
+                </ui:FilterOperationArgument>
+              </scg:List>
+            </ui:FilterDataTable.Filters>
+            <ui:FilterDataTable.OutputDataTable>
+              <OutArgument x:TypeArguments="sd:DataTable">
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">dtApproved</CSharpReference>
+              </OutArgument>
+            </ui:FilterDataTable.OutputDataTable>
+            <ui:FilterDataTable.SelectColumns>
+              <scg:List x:TypeArguments="InArgument" Capacity="4">
+                <x:Null />
+              </scg:List>
+            </ui:FilterDataTable.SelectColumns>
+          </ui:FilterDataTable>
         </Sequence>
       </ui:IfElseIfV2.Else>
       <ui:IfElseIfV2.ElseIfs>
-        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-          <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_6">
-            <ui:IfElseIfBlock.Condition>
-              <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_136">Approver=="Nitish &amp; Tanima"</CSharpValue>
-              </InArgument>
-            </ui:IfElseIfBlock.Condition>
-            <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,442.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:FilterDataTable DisplayName="Filter Data Table based on Approver" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,196" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" SelectColumnsMode="Remove">
-                  <ui:FilterDataTable.DataTable>
-                    <InArgument x:TypeArguments="sd:DataTable">
-                      <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_156">dtPTO</CSharpValue>
-                    </InArgument>
-                  </ui:FilterDataTable.DataTable>
-                  <ui:FilterDataTable.Filters>
-                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_146">"Status:"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_147">"Approved"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="GT">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_148">"From Date:"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="s:DateTime">
-                            <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_149">DateTime.Today</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_154">"Email Status"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_155">"Sent"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                    </scg:List>
-                  </ui:FilterDataTable.Filters>
-                  <ui:FilterDataTable.OutputDataTable>
-                    <OutArgument x:TypeArguments="sd:DataTable">
-                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">dtNT</CSharpReference>
-                    </OutArgument>
-                  </ui:FilterDataTable.OutputDataTable>
-                  <ui:FilterDataTable.SelectColumns>
-                    <scg:List x:TypeArguments="InArgument" Capacity="4">
-                      <x:Null />
-                    </scg:List>
-                  </ui:FilterDataTable.SelectColumns>
-                </ui:FilterDataTable>
-                <ui:FilterDataTable DisplayName="Filter Data Table based on Approver" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,186.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" SelectColumnsMode="Remove">
-                  <ui:FilterDataTable.DataTable>
-                    <InArgument x:TypeArguments="sd:DataTable">
-                      <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_163">dtNT</CSharpValue>
-                    </InArgument>
-                  </ui:FilterDataTable.DataTable>
-                  <ui:FilterDataTable.Filters>
-                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_158">"Approver"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_159">"Nitish Kumar"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_160">"Approver"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_161">"Tanima Debmallik/Nitish Kumar"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                    </scg:List>
-                  </ui:FilterDataTable.Filters>
-                  <ui:FilterDataTable.OutputDataTable>
-                    <OutArgument x:TypeArguments="sd:DataTable">
-                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">dtApproved</CSharpReference>
-                    </OutArgument>
-                  </ui:FilterDataTable.OutputDataTable>
-                  <ui:FilterDataTable.SelectColumns>
-                    <scg:List x:TypeArguments="InArgument" Capacity="4">
-                      <x:Null />
-                    </scg:List>
-                  </ui:FilterDataTable.SelectColumns>
-                </ui:FilterDataTable>
-              </Sequence>
-            </ui:IfElseIfBlock.Then>
-          </ui:IfElseIfBlock>
-        </sc:BindingList>
+        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
       </ui:IfElseIfV2.ElseIfs>
       <ui:IfElseIfV2.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,246.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_29">
@@ -459,181 +373,6 @@
         </Sequence>
       </ui:IfElseIfV2.Then>
     </ui:IfElseIfV2>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="680,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_32">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <If sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="If_2">
-            <If.Condition>
-              <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">Approver == "All"</CSharpValue>
-              </InArgument>
-            </If.Condition>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,246.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,186.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
-                  <ui:FilterDataTable.DataTable>
-                    <InArgument x:TypeArguments="sd:DataTable">
-                      <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">dtPTO</CSharpValue>
-                    </InArgument>
-                  </ui:FilterDataTable.DataTable>
-                  <ui:FilterDataTable.Filters>
-                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">"Status:"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"Approved"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="GT">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">"From Date:"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="s:DateTime">
-                            <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">DateTime.Today</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">"Email Status"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">"Sent"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                    </scg:List>
-                  </ui:FilterDataTable.Filters>
-                  <ui:FilterDataTable.OutputDataTable>
-                    <OutArgument x:TypeArguments="sd:DataTable">
-                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">dtApproved</CSharpReference>
-                    </OutArgument>
-                  </ui:FilterDataTable.OutputDataTable>
-                  <ui:FilterDataTable.SelectColumns>
-                    <scg:List x:TypeArguments="InArgument" Capacity="4">
-                      <x:Null />
-                    </scg:List>
-                  </ui:FilterDataTable.SelectColumns>
-                </ui:FilterDataTable>
-              </Sequence>
-            </If.Then>
-            <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,246.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:FilterDataTable DisplayName="Filter Data Table based on Approver" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,186.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" SelectColumnsMode="Remove">
-                  <ui:FilterDataTable.DataTable>
-                    <InArgument x:TypeArguments="sd:DataTable">
-                      <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">dtPTO</CSharpValue>
-                    </InArgument>
-                  </ui:FilterDataTable.DataTable>
-                  <ui:FilterDataTable.Filters>
-                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">"Status:"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"Approved"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="GT">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">"From Date:"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="s:DateTime">
-                            <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">DateTime.Today</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"Approver"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">Approver</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">"Email Status"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">"Sent"</CSharpValue>
-                          </InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                    </scg:List>
-                  </ui:FilterDataTable.Filters>
-                  <ui:FilterDataTable.OutputDataTable>
-                    <OutArgument x:TypeArguments="sd:DataTable">
-                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">dtApproved</CSharpReference>
-                    </OutArgument>
-                  </ui:FilterDataTable.OutputDataTable>
-                  <ui:FilterDataTable.SelectColumns>
-                    <scg:List x:TypeArguments="InArgument" Capacity="4">
-                      <x:Null />
-                    </scg:List>
-                  </ui:FilterDataTable.SelectColumns>
-                </ui:FilterDataTable>
-              </Sequence>
-            </If.Else>
-          </If>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="680,414.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -960,7 +699,7 @@
                         <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
                           <ui:IfElseIfBlock.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
-                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">Approver=="Harshad Mandlik" || Approver=="Jagannath Belel"</CSharpValue>
+                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">Approver=="Harshad Mandlik" || Approver=="Jagannath Belel" || Approver=="Vineeth Tulasi" || Approver=="Pavani B Raj" || Approver=="Rajitha D" || Approver=="Tanuja Sunkara" || Approver=="Rachanna Golla" || Approver=="Heather Gustafson" || Approver=="Tanima Debmallik"</CSharpValue>
                             </InArgument>
                           </ui:IfElseIfBlock.Condition>
                           <ui:IfElseIfBlock.Then>
